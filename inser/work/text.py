@@ -1,0 +1,10 @@
+#提示用户进行输入数据
+#获取用户的数据（需要获取两个）
+#对获取的两个数字进行减法运行
+hight=input("身高：")
+Hight=hight
+weight=input("体重")
+Weight=weight
+differ=input("他们俩相差多少：")
+dif=eval(differ)
+print("%d"%dif)

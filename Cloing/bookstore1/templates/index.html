@@ -1,0 +1,204 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+    {% block users %}
+	<div class="header_con">
+		<div class="header">
+			<div class="welcome fl">欢迎来到尚硅谷书城!</div>
+			<div class="fr">
+				{% if request.session.islogin %}
+				<div class="login_info fl">
+					欢迎您：<em>{{ request.session.username }}</em>
+					<span>|</span>
+					<a href="{% url 'user:logout' %}">退出</a>
+				</div>
+				{% else %}
+				<div class="login_btn fl">
+					<a href="{% url 'user:login' %}">登录</a>
+					<span>|</span>
+					<a href="{% url 'user:register' %}">注册</a>
+				</div>
+				{% endif %}
+				<div class="user_link fl">
+					<span>|</span>
+					<a href="user_center_info.html">用户中心</a>
+					<span>|</span>
+					<a href="cart.html">我的购物车</a>
+					<span>|</span>
+					<a href="user_center_order.html">我的订单</a>
+				</div>
+			</div>
+		</div>
+	</div>
+    {% endblock %}
+    {% block us %}
+	<div class="search_bar clearfix">
+		<a href="index.html" class="logo fl"><img src="{% static 'images/logo.png' %}" style="width: 160px; height: 53px;"></a>
+		<div class="search_con fl">
+			<input type="text" class="input_text fl" name="" placeholder="搜索商品">
+			<input type="button" class="input_btn fr" name="" value="搜索">
+		</div>
+		<div class="guest_cart fr">
+			<a href="#" class="cart_name fl">我的购物车</a>
+			<div class="book_count fl" id="show_count">1</div>
+		</div>
+	</div>
+    {% endblock %}
+    {% block sp %}
+	<div class="list_model">
+		<div class="list_title clearfix">
+			<h3 class="fl" id="model01">Python</h3>
+			<div class="subtitle fl">
+				<span>|</span>
+                {% for book in python_hot %}
+				<a href="#">{{ book.name }}</a>
+                {% endfor %}
+			</div>
+			<a href="#" class="book_more fr">查看更多 ></a>
+		</div>
+
+		<div class="book_con clearfix">
+			<div class="book_banner fl"><img src="/static/images/banner01.jpg"></div>
+			<ul class="book_list fl">
+                {% for book in python_new %}
+				<li>
+					<h4><a href="{% url 'books:deatil' books_id=book.id %}">{{ book.name }}</a></h4>
+					<a href="#"><img src="{% static book.image %}"></a>
+					<div class="prize">¥ {{ book.price }}</div>
+				</li>
+                {% endfor %}
+			</ul>
+		</div>
+	</div>
+
+	<div class="list_model">
+		<div class="list_title clearfix">
+			<h3 class="fl" id="model02">Javascript</h3>
+			<div class="subtitle fl">
+				<span>|</span>
+                {% for java in javascript_new %}
+				<a href="#">{{ java.name }}</a>
+                {% endfor %}
+			</div>
+			<a href="#" class="book_more fr">查看更多 ></a>
+		</div>
+
+		<div class="book_con clearfix">
+			<div class="book_banner fl"><img src="/static/images/banner02.jpg"></div>
+			<ul class="book_list fl">
+                {% for java in javascript_hot %}
+				<li>
+					<h4><a href="#">{{ java.name }}</a></h4>
+					<a href="#"><img src="{% static java.image %}"></a>
+					<div class="prize">¥ {{ java.price }}</div>
+				</li>
+                {% endfor %}
+			</ul>
+		</div>
+	</div>
+
+	<div class="list_model">
+		<div class="list_title clearfix">
+			<h3 class="fl" id="model03">数据结构与算法</h3>
+			<div class="subtitle fl">
+				<span>|</span>
+                {% for a in algorithms_hot %}
+				<a href="#">{{ a.name }}</a>
+                {% endfor %}
+			</div>
+			<a href="#" class="book_more fr">查看更多 ></a>
+		</div>
+
+		<div class="book_con clearfix">
+			<div class="book_banner fl"><img src="/static/images/banner03.jpg"></div>
+			<ul class="book_list fl">
+                {% for a in algorithms_new %}
+				<li>
+					<h4><a href="#">{{ a.name }}</a></h4>
+					<a href="#"><img src="{% static a.image %}"></a>
+					<div class="prize">¥ {{ a.price }}</div>
+				</li>
+                {% endfor %}
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="list_model">
+		<div class="list_title clearfix">
+			<h3 class="fl" id="model04">机器学习</h3>
+			<div class="subtitle fl">
+				<span>|</span>
+                {% for b in machinelearning_hot %}
+				<a href="#">{{ b.name }}</a>
+                {% endfor %}
+			</div>
+			<a href="#" class="book_more fr">查看更多 ></a>
+		</div>
+
+		<div class="book_con clearfix">
+			<div class="book_banner fl"><img src="/static/images/banner04.jpg"></div>
+			<ul class="book_list fl">
+                {% for b in machinelearning_hot %}
+				<li>
+					<h4><a href="{% url 'books:deatil' %}">{{ b.name }}</a></h4>
+					<a href="#"><img src="{% static b.image %}"></a>
+					<div class="prize">¥ {{ b.price }}</div>
+				</li>
+                {% endfor %}
+			</ul>
+		</div>
+	</div>
+
+	<div class="list_model">
+		<div class="list_title clearfix">
+			<h3 class="fl" id="model05">操作系统</h3>
+			<div class="subtitle fl">
+				<span>|</span>
+                {% for c in operatingsystem_hot %}
+				<a href="#">{{ c.name }}</a>
+
+                {% endfor %}
+			</div>
+			<a href="#" class="book_more fr">查看更多 ></a>
+		</div>
+
+		<div class="book_con clearfix">
+			<div class="book_banner fl"><img src="/static/images/banner05.jpg"></div>
+			<ul class="book_list fl">
+                {% for c in operatingsystem_new %}
+				<li>
+					<h4><a href="#">{{ c.name }}</a></h4>
+					<a href="#"><img src="{% static c.image %}"></a>
+					<div class="prize">¥ {{ c.price }}</div>
+				</li>
+                {% endfor %}
+			</ul>
+		</div>
+	</div>
+
+	<div class="list_model">
+		<div class="list_title clearfix">
+			<h3 class="fl" id="model06">数据库</h3>
+			<div class="subtitle fl">
+				<span>|</span>
+                {% for d in database_hot %}
+				<a href="#">{{ d.name }}</a>
+                {% endfor %}
+			</div>
+			<a href="#" class="book_more fr">查看更多 ></a>
+		</div>
+
+		<div class="book_con clearfix">
+			<div class="book_banner fl"><img src="/static/images/banner06.jpg"></div>
+			<ul class="book_list fl">
+                {% for d in database_hot %}
+				<li>
+					<h4><a href="#">{{ d.name }}</a></h4>
+					<a href="#"><img src="{% static d.image %}"></a>
+					<div class="prize">¥ {{ d.price }}</div>
+				</li>
+                {% endfor %}
+			</ul>
+		</div>
+	</div>
+    {% endblock %}

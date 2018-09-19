@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block menu %}
+    <div id="menu-wrapper">
+            <div id="menu" class="menu">
+                <ul id="tiny">
+                    <li class="active"><a href="{% url 'index' %}">博客</a>
+                        <ul>
+                            <li><a href="post.html">留言</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{% url 'user:article' %}">文章</a>
+                        <ul>
+                            <li><a href="page-with-sidebar.html">页面侧边栏</a></li>
+                            <li><a href="full-width.html">全宽</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="typography.html">风格</a>
+                        <ul>
+                            <li><a href="typography.html">排版</a></li>
+                            <li><a href="columns.html">列</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">联系</a></li>
+                </ul>
+            </div>
+        </div>
+{% endblock %}

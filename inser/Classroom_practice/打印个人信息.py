@@ -1,0 +1,15 @@
+def sampt_name():
+    name=input("请输入您的名字：")
+    age=int(input('请输入您的年龄'))
+    sex=input('请输入您的性别')
+    qq=input('请输入您的QQ：')
+    wek=input("请输入您的微信：")
+    print("="*50)
+    print("姓名：%s"%name)
+    print('性别：%s'%sex)
+    print('年龄：%s'%age)
+    print('QQ:%s'%qq)
+    print("微信：%s"%wek)
+    print('='*50)
+
+sampt_name()
