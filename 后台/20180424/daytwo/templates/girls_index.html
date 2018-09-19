@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>美女主页</title>
+</head>
+<body>
+<a href="{% url 'index' %}">回到首页</a>
+<a href="{% url 'girls:get_girls_data' %}?name=Mr_Li&a=1&b=2">测试美女</a>
+<a href="{% url 'girls:from_test' %}">表单页面</a>
+</body>
+</html>

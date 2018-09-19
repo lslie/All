@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+</head>
+<body>
+<form action="{% url 'user:user_login' %}" method="post">
+    {% csrf_token %}
+{#    {% if request.session.u_name %}#}
+    账户名:<input type="text" name="username" value="{{ u_name }}">
+{#    {% endif %}#}
+    昵称:<input type="text" name="nik_name">
+    密码:<input type="password" name="password">
+    确认密码<input type="password" name="password1">
+    <input type="checkbox" name="check">
+    <input type="submit">
+    <div>{{ msg }}</div>
+</form>
+</body>
+</html>

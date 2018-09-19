@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+</head>
+<body>
+<a href="{% url 'index' %}">回到首页</a><a href="{% url 'girls:girls_index' %}">回到上一级</a><a href="{% url 'new:new_index' %}">回到新闻</a>
+<form action="{% url 'girls:from_test' %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="username">
+    <input type="text" name="password">
+    <input type="submit">
+</form>
+</body>
+</html>

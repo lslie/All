@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>所有学生信息</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>编号</th>
+        <th>班级</th>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>性别</th>
+        <th>操作</th>
+    </tr>
+    {% for i in s %}
+        <tr>
+
+                <td>{{ forloop.counter }}</td>
+                <td>{{ i.th_class.name }}</td>
+                <td>{{ i.name }}</td>
+                <td>{{ i.age }}</td>
+                <td>{{ i.gender }}</td>
+                <td>
+                    <a href="{% url 'user:delete_student' i.id %}">删除</a>
+                    <a href="{% url 'user:update_student' i.id%}">修改</a>
+                </td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

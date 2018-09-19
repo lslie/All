@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+ {% block user_data %}
+<span class="hidden-xs">用户信息</span>
+{% endblock %}
+{% block signout %}
+<div class="pull-right">
+  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+</div>
+{% endblock %}
+{% block sin %}
+<p>用户信息</p>
+<a href="{% url 'users:user_sin' %}"><i class="fa fa-circle text-success"></i> 点击注册</a>
+{% endblock %}

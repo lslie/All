@@ -1,0 +1,86 @@
+*** Starting uWSGI 2.0.17 (64bit) on [Thu May  3 21:34:47 2018] ***
+compiled with version: 5.4.0 20160609 on 25 April 2018 13:23:55
+os: Linux-4.4.0-105-generic #128-Ubuntu SMP Thu Dec 14 12:42:11 UTC 2017
+nodename: iZ2ze9m0r7176s3xod4es0Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/myproject/django/0502/script
+writing pidfile to /root/myproject/django/0502/script/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/myproject/django/0502/blog/
+your processes number limit is 3825
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /root/myproject/django/0502/script/uwsgi.sock fd 3
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 23 2017, 16:37:01)  [GCC 5.4.0 20160609]
+Set PythonHome to /root/Envs/python3
+Python main interpreter initialized at 0x2307ae0
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 892056 bytes (871 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x2307ae0 pid: 11006 (default app)
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 11006)
+spawned uWSGI worker 1 (pid: 11008, cores: 1)
+spawned uWSGI worker 2 (pid: 11009, cores: 1)
+spawned uWSGI worker 3 (pid: 11010, cores: 1)
+spawned uWSGI worker 4 (pid: 11011, cores: 1)
+spawned uWSGI worker 5 (pid: 11012, cores: 1)
+spawned uWSGI worker 6 (pid: 11013, cores: 1)
+spawned uWSGI worker 7 (pid: 11014, cores: 1)
+spawned uWSGI worker 8 (pid: 11015, cores: 1)
+spawned uWSGI worker 9 (pid: 11016, cores: 1)
+spawned uWSGI worker 10 (pid: 11017, cores: 1)
+*** Starting uWSGI 2.0.17 (64bit) on [Thu May  3 22:17:51 2018] ***
+compiled with version: 5.4.0 20160609 on 25 April 2018 13:23:55
+os: Linux-4.4.0-105-generic #128-Ubuntu SMP Thu Dec 14 12:42:11 UTC 2017
+nodename: iZ2ze9m0r7176s3xod4es0Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /root/myproject/django/0502/script
+writing pidfile to /root/myproject/django/0502/script/uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /root/myproject/django/0502/blog/
+your processes number limit is 3825
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: enabled
+uwsgi socket 0 bound to UNIX address /root/myproject/django/0502/script/uwsgi.sock fd 3
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 23 2017, 16:37:01)  [GCC 5.4.0 20160609]
+Set PythonHome to /root/Envs/python3
+Python main interpreter initialized at 0x1c1fa80
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 892056 bytes (871 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1c1fa80 pid: 18396 (default app)
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 18396)
+spawned uWSGI worker 1 (pid: 18398, cores: 1)
+spawned uWSGI worker 2 (pid: 18399, cores: 1)
+spawned uWSGI worker 3 (pid: 18400, cores: 1)
+spawned uWSGI worker 4 (pid: 18401, cores: 1)
+spawned uWSGI worker 5 (pid: 18402, cores: 1)
+spawned uWSGI worker 6 (pid: 18403, cores: 1)
+spawned uWSGI worker 7 (pid: 18404, cores: 1)
+spawned uWSGI worker 8 (pid: 18405, cores: 1)
+spawned uWSGI worker 9 (pid: 18406, cores: 1)
+spawned uWSGI worker 10 (pid: 18407, cores: 1)

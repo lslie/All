@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<!--[if lt IE 7 ]><html lang="en" class="ie6 ielt7 ielt8 ielt9"><![endif]--><!--[if IE 7 ]><html lang="en" class="ie7 ielt8 ielt9"><![endif]--><!--[if IE 8 ]><html lang="en" class="ie8 ielt9"><![endif]--><!--[if IE 9 ]><html lang="en" class="ie9"> <![endif]--><!--[if (gt IE 9)|!(IE)]><!--> 
+<html lang="en"><!--<![endif]--> 
+	<head>
+		<meta charset="utf-8">
+		<title>Login - Akira</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+		<link href="{% static 'css/bootstrap-responsive.min.css' %}" rel="stylesheet">
+		<link href="{% static 'css/site.css" rel="stylesheet' %}">
+		<!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+	</head>
+	<body>
+		<div id="login-page" class="container">
+			<h1>用户登录</h1>
+			<form action="{% url 'users:login' %}" method="post">
+                {% csrf_token %}
+			用户名:<input type="text" class="span2" placeholder="Email" name="username" /><br />
+            昵称:<input type="text" class="span2" placeholder="Email" name="nik_name" /><br />
+            密码:<input type="text" class="span2" placeholder="Email" name="password" /><br />
+			确认密码密码:<input type="password" class="span2" placeholder="Password" name="password1" /><br />
+			<button type="submit" class="btn btn-primary">点击登录</button>
+		</form>
+            <div>{{ msg }}</div>
+		</div>
+		<script src="{% static 'js/jquery.min.js' %}"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}"></script>
+		<script src="{% static 'js/site.js' %}"></script>
+	</body>
+</html>

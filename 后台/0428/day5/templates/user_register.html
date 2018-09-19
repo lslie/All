@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册页面</title>
+</head>
+<body>
+<form action="{% url 'user:user_register' %}" method="post">
+    {% csrf_token %}
+    账户名：<input type="text" name="username">
+    昵称：<input type="text" name="nik_name">
+    密码：<input type="text" name="password">
+    确认密码：<input type="text" name="password1">
+    <input type="submit">
+    <div>{{ msg }}</div>
+</form>
+</body>
+</html>
