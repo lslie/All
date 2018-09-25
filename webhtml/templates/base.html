@@ -1,0 +1,73 @@
+<!-- base.html -->
+$def with (page)
+<html>
+<head>
+    <title>My Blog</title>
+    <mce:style><!--
+            #menu {
+                width: 200px;
+                float: right;
+            }
+
+--></mce:style>
+    <style mce_bogus="1">            #menu {
+        width: 200px;
+        float: right;
+    }
+    </style>
+</head>
+
+<body>
+<ul id="menu">
+    <li><a href="/" mce_href="">Home</a></li>
+    $if cookie().get('username'):
+    <li><a href="/new" mce_href="new">New Post</a></li>
+</ul>
+
+$:page
+</body>
+</html>
+
+<!-- edit.html -->
+$def with (post, form)
+<h1>Edit $form.d.title</h1>
+<form action="" method="post">
+    $:form.render()
+</form>
+<h2>Delete post</h2>
+<form action="/delete/$post.id" method="post">
+    <input type="submit" value="Delete post"/>
+</form>
+
+<!-- index.html -->
+$def with (posts, login_form)
+<h1>Blog posts</h1>
+$if not cookie().get('username'):
+<form action="" method="post">
+    $:login_form.render()
+</form>
+$else:
+Welcome $cookie().get('username')!<a href="/logout" mce_href="logout">Logout</a>
+<ul>
+    $for post in posts:
+    <li>
+        <a href="/view/$post.id" mce_href="view/$post.id">$post.title</a>
+        on $post.posted_on
+        $if cookie().get('username'):
+        <a href="/edit/$post.id" mce_href="edit/$post.id">Edit</a>
+        <a href="/delete/$post.id" mce_href="delete/$post.id">Del</a>
+    </li>
+</ul>
+
+<!-- new.html -->
+$def with (form)
+<h1>New Blog Post</h1>
+<form action="" method="post">
+    $:form.render()
+</form>
+
+<!-- view.html -->
+$def with (post)
+<h1>$post.title</h1>
+$post.posted_on<br/>
+$post.content
